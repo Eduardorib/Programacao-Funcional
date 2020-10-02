@@ -123,7 +123,7 @@ quicksort (s:xs) = quicksort [x | x <- xs,x < s]
 
 -- Ex 11
 
-bubblesort2 :: Ord a => [a] -> ([a],Int)
+bubblesort2  :: Ord a => [a] -> ([a],Int)
 bubblesort2 [] = ([],0)
 bubblesort2 l = bolhaOrd2 (l,0) (length l)
 
@@ -140,15 +140,22 @@ troca2 ( (x:y:zs),cont)
                 where
                 add (lista, cont) a = (a : lista, cont)
 
+selectionsort2 :: Ord a => [a] -> ([a], Int)
+selectionsort2 lista = selectionAUX lista 0
 
-selectionsort2 :: (Ord a) => [a] -> ([a], Int)
-selectionsort2 xs  = ( [fst x] ++ selectionSort (remove2 x xs) ,snd x)
-                                where x = minimo2 xs 0
-remove2 :: (Ord a) => a -> [a] -> [a]
-remove2 a [] = []
-remove2 a (x:xs)
-                | a == x = xs
-                | otherwise = x : (remove a xs)
+selectionAUX :: (Ord a) => [a] -> Int -> ([a], Int)
+selectionAUX [] n = ([], n)
+selectionAUX (x : xs) n =
+  let (least, n_num) = minimo2 (x : xs) n
+
+      remove2 _ [] = []
+      remove2 n (h : t) =
+        if (n == h)
+          then t
+          else h : (remove2 n t)
+
+      add (lst, n) y = (y : lst, n)
+   in add (selectionAUX (remove2 least (x : xs)) n_num) least
 
 minimo2 :: (Ord a) => [a] -> Int -> (a, Int)
 minimo2 [] _ = undefined
