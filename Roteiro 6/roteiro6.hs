@@ -120,6 +120,8 @@ quicksort [] = []
 quicksort (s:xs) = quicksort [x | x <- xs,x < s]
                    ++ [s] ++
                    quicksort [x | x <- xs,x >= s]
+-- Obs : Tive que pedir ajuda nos exercicios 11 e 12 , portanto talvez esteja parecido com os exs de outra pessoa,
+-- não consegui manter a originalidade de alguns porque foi a implementação foi a única que fez sentido para mim :)
 
 -- Ex 11
 
@@ -193,7 +195,7 @@ quickAux (x : xs) n cond =
   where
     add (list, n) y = (y : list, n)
 
-quicksort2 :: (Ord a) => [a] -> ([a], Int)
+quicksort2  :: (Ord a) => [a] -> ([a], Int)
 quicksort2 [] = ([], 0)
 quicksort2 (piv : xs) =
   let (left, n_L) = quickAux xs 0 (<= piv)
@@ -222,7 +224,7 @@ troca3 ((x : y : zs), cont) =
     add (lista, count) a = (a : lista, count)
 
 
-selectionsort3 :: Ord a => [a] -> ([a], Int)
+selectionsort3  :: Ord a => [a] -> ([a], Int)
 selectionsort3 lista = selectionAUX2 lista 0
 
 selectionAUX2 :: (Ord a) => [a] -> Int -> ([a], Int)
@@ -275,7 +277,7 @@ quickAux2 (x : xs) n cond =
   where
     add (list, n) y = (y : list, n)
 
-quicksort3 :: (Ord a) => [a] -> ([a], Int)
+quicksort3  :: (Ord a) => [a] -> ([a], Int)
 quicksort3 [] = ([], 0)
 quicksort3 (piv : xs) =
   let (left, n_L) = quickAux2 xs 0 (<= piv)
