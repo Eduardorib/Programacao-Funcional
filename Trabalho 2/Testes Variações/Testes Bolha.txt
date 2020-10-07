@@ -1,0 +1,20 @@
+Bolha Original com Variação1 
+Re: Percebe-se de imediato que a variação1 se sai um pouco melhor em termos de velocidade em relação a Bolha Original em todas as listas.
+
+Bolha Original com Variação2
+Re: Igual a Variação1, a Variação2 sai melhor em termos de velocidade.
+
+Bolha Original com Variação3
+Re: Percebi que mesmo juntando os dois conceitos da primeira e segunda variação, a velocidade parece ser igual a elas, talvez com uma lista maior de para perceber uma maior velocidade.
+
+//Com contadores
+
+Bolha Original , Variação1, Variação2 e Variação3
+
+l1 = 999000 vs 999 vs 499500 vs 999
+l2 = 999000 vs 999000 vs 499500 vs 499500
+l3 = 1001000 vs 1001000 vs 500500 vs 500500
+l4 = 1001000 vs 1000000 vs 500500 vs 500499
+l5 = 4002000 vs 3998000 vs 2001000 vs 2000997
+l6 = 4002000 vs 2002000 vs 2001000 vs 1500500
+l7 = 4002000 vc 3998000 vs 2001000 vs 2000997

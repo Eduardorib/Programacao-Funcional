@@ -1,0 +1,16 @@
+QuickSort com Variação1 e Variaçao2
+Re : É perceptivel uma velocidade maior da variação1 e 2 em relação ao quickSort normal. 
+Entre as variações foi observado diferença sutil, a variação2 foi um pouco mais veloz. 
+Obs : A partir da lista l5 da para perceber uma diferença maior de velocidade entre as duas variações.
+
+// Com contadores
+
+Variação1 , Variação2
+
+l1 = 499500 vs 251499
+l2 = 499500 vs 251499
+l3 = 499501 vs 251502
+l4 = 500500 vs 252501
+l5 = 1001000 vs 504501
+l6 = 1001000 vs 504501
+l7 = 1001000 vs 504501
